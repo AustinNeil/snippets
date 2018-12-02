@@ -12,3 +12,14 @@ const component = () => {
 export default component;
 
 ```
+Accepting props
+
+```javascript
+
+const component = props => {
+    return(
+        <div>props.message</div>
+    )
+}
+
+```
