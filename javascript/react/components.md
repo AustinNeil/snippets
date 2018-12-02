@@ -1,6 +1,7 @@
 # React Components
 
 ## Functional Components
+Functional Components should be used when state is not managed and are used primarily to display or return information
 ```javascript
 import React from 'react';
 const component = () => {
@@ -11,7 +12,6 @@ const component = () => {
 export default component;
 ```
 Accepting props
-
 ```javascript
 const component = props => {
     return(
@@ -21,6 +21,7 @@ const component = props => {
 ```
 
 ## Class Components
+Class Components should be used when state is required and typically contain functional components
 ```javascript
 export default class TodoContainer extends Component {
     render(){
@@ -43,7 +44,6 @@ constructor(props){
     }
 }
 ```
-
 ### Class Functions
 ```javascript
 // add handler
