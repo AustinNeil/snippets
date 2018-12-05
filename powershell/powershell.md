@@ -9,7 +9,8 @@ param(
     [string]$source,
     [string]$destination,
     [System.Object]$config,
-    [string]$customerID
+    [string]$customerID,
+    [parameter(Mandatory=$true)][bool]$json
 )
 ```
 
@@ -161,5 +162,14 @@ function Get-RepoFIle() {
         $data = $data | ConvertFrom-Json
     }
     return $data
+}
+```
+
+## Json Objects
+If all else fails, try this:
+
+```powershell
+foreach ($key in $devAccounts.PSObject.Properties.Name){
+    $devAccounts.Key
 }
 ```
