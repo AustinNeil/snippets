@@ -14,7 +14,7 @@
 ## Emphasis
 
 ```markdown
-Italics are down with *asterisk* or _underscore_
+Italics are done with *asterisk* or _underscore_
 
 stronger italics (bold) with **asterisks** or __underscores__
 
@@ -55,3 +55,4 @@ underscores
 
 - Line Breaks
 - Tables
+- Syntax Highlighting
