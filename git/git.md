@@ -48,6 +48,9 @@ git commit -m "message"
 
 This will commit to the HEAD of the remote working directory, but not yet to the origin directory
 
+- fixing commit messages
+- Commit verbage
+
 ### Push
 
 ```git
@@ -61,7 +64,6 @@ git push origin <branchName>
 ```
 
 example `git push origin ft/10043-my-feature`
-
 
 ### Log
 
@@ -79,10 +81,20 @@ This is a great way to get the SHA hash of commits for other commands
 git branch -d <branchName>
 ```
 
-## Topics
+### Stash
+
+### Tagging
+
+### Rebase
+
+### Set-Upstream
+
+## Concepts
 
 ### Branches
 
+- naming conventions
+  
 #### Branch commands
 
 ##### Create a new branch
@@ -102,6 +114,18 @@ git checkout <branchName>
 ```git
 git checkout -b <branchName>
 ```
+
+### Merging
+
+- --no-ff
+
+### Cherry-Picking
+
+- Cherry Picking
+
+### Pull Requests
+
+- How to / what is
 
 ## Scenarios
 
@@ -125,7 +149,7 @@ git clone username@host:/path/to/repo
 
 ### Updates
 
-### Fetch vs. Merge vs. Pull
+#### Fetch vs. Merge vs. Pull
 
 #### Pull
 
@@ -133,29 +157,10 @@ A `git pull origin <branchName>` will simply do the same as `git fetch origin <b
 
 #### Fetch
 
-
 #### Merge
-
 
 Update your local repository to the newist commit from origin with
 
 ```git
 git pull
 ```
-
-## TODO
-
-- cherry-pick
-- push
-- pull
-- rebase
-- pull requests
-- Branching
-- Merge
-- naming conventions for branches
-- commit verbage
-- Fixing or changing commit messages
-- going back in time (stash)
-- tagging
-- set upstream
-- no-ff
