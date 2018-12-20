@@ -173,3 +173,7 @@ foreach ($key in $devAccounts.PSObject.Properties.Name){
     $devAccounts.Key
 }
 ```
+
+## PSCustomObjects
+
+[Information Here](https://kevinmarquette.github.io/2016-10-28-powershell-everything-you-wanted-to-know-about-pscustomobject/)
