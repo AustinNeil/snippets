@@ -1,6 +1,7 @@
 # Using Git
 
 [Great Playground to mess with git commands](https://onlywei.github.io/explain-git-with-d3/#freeplay)
+[Other Help](http://rogerdudler.github.io/git-guide/)
 
 ## Tips
 
@@ -80,6 +81,8 @@ This is a great way to get the SHA hash of commits for other commands
 ```git
 git branch -d <branchName>
 ```
+
+### Diff
 
 ### Stash
 
