@@ -184,7 +184,7 @@ This is a great way to get the SHA hash of commits for other commands
 ```git
 git branch -d <branchName>
 ```
-
+<!-- 
 ### Diff
 
 TODO
@@ -211,7 +211,7 @@ TODO
 
 TODO
 
-- naming conventions
+- naming conventions -->
   
 #### Branch commands
 
@@ -232,7 +232,7 @@ git checkout <branchName>
 ```git
 git checkout -b <branchName>
 ```
-
+<!-- 
 ### Merging
 
 TODO
@@ -249,7 +249,7 @@ TODO
 
 TODO
 
-- How to / what is
+- How to / what is -->
 
 ## Scenarios
 
@@ -278,14 +278,14 @@ git clone username@host:/path/to/repo
 ##### Pull
 
 A `git pull origin <branchName>` will simply do the same as `git fetch origin <branchName>` followed automatically by `git merge origin <branchName>` and will attempt to do so automatically.
-
+<!-- 
 ##### Fetch
 
 TODO
 
 ##### Merge
 
-TODO
+TODO -->
 
 Update your local repository to the newist commit from origin with
 
