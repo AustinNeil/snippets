@@ -155,13 +155,16 @@ git commit -m "Update README.md"
 
 ### Push
 
-TODO
+Changes commited to your local repository are referred to as your **local tree**.\
+In order to push these changes to the origin (source) tree, use `git push`.\
 
 ```git
 git push
 ```
 
-#### Pushing to origin branch
+#### Pushing to specific branch
+
+In order to be more precise, it's recommended to explicitly declare the branch you want to be pushed to,
 
 ```git
 git push origin <branchName>
@@ -179,11 +182,28 @@ git log
 
 This is a great way to get the SHA hash of commits for other commands
 
-#### Delete a branch
+Sample Output
 
-```git
-git branch -d <branchName>
+```text
+commit 15cbaa987bac03e94d1f7g8fd60ca2ddb5ce2145
+Author: AustinNeil
+Date:   Sun Jan 01 12:04:49 2000 -0600
+
+    Comment unused sections
+
+commit 847553109de9a0e21f2cd89248259f4985fd5ea7
+Author: AustinNeil
+Date:   Sun Jan 01 11:59:23 2000 -0600
+
+    Update Commit section
 ```
+
+From above you can see some useful information:\
+**commit** is the Commit SHA key. This is used to identify commits and make changes or move along the history if desired.\
+**author** - who made the change\
+**Date** - when it happened\
+**Commit Message** is the text following the Data and before the next commit SHA. This is one of the reasons why proper commit messgages are so important!\
+
 <!-- 
 ### Diff
 
@@ -204,18 +224,15 @@ TODO
 ### Set-Upstream
 
 TODO
+-->
 
 ## Concepts
 
-### Branches
+### Branching
 
-TODO
+#### Create a new branch
 
-- naming conventions -->
-  
-#### Branch commands
-
-##### Create a new branch
+To create a new brach run,
 
 ```git
 git branch <branchName>
@@ -223,15 +240,30 @@ git branch <branchName>
 
 ##### Move to new branch
 
+In order to move to the new branch, you must check it out using,
+
 ```git
 git checkout <branchName>
 ```
 
 ##### Create and move in one command, use git checkout with -b flag
 
+This can of course all be done at once via,
+
 ```git
 git checkout -b <branchName>
 ```
+
+The `-b` flag tells the checkout command that you'd also like to create the branch if it doesn't exist.
+
+#### Delete a branch
+
+Branch can be run with the `-d` flag in order to **delete** a branch.
+
+```git
+git branch -d <branchName>
+```
+
 <!-- 
 ### Merging
 
