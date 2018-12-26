@@ -29,6 +29,8 @@ From the **Master Branch**, other branches can be created for various reasons in
 The purpose of branching is to create an isolated part of the repository where changes will not affect anything else,\
 especially the Master Branch
 
+===
+
 ```text
 
 master      --A----------------F--H-->
@@ -38,16 +40,42 @@ ft-feature1 ----B-----C------E--/---->
 ft-feature2 ------------D-----G------>
 ```
 
+===
+
+What the heck is going on here?\
+Branching in action, albeit with some extra things we haven't quite gotten to yet.\
+We'll circle back to this soon.
+
 ## Commands
 
 ### Status
 
-TODO
 To find what files are currently "untracked" vs what is staged to be committed, run
 
 ```git
 git status
 ```
+
+Example:
+
+```git
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+This status report tells us a few very useful things:
+**On branch master** tells us that our current branch is the master branch\
+**Your branch is up to date with 'origin/master'** assures us that we have pulled all recent commits from our origin repository's master branch\
+**Changes not staged for commit:** gives us a list of all files that have been modified since our last commit. These file changed are in our working directory, but not in our staging area (Index)\
+In addition to these details, `git status` also will give you sample commands to do common tasks that you may be interested in doing, such as `git add`...
 
 ### Add
 
