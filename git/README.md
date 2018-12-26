@@ -73,23 +73,46 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 This status report tells us a few very useful things:\
 \
-**On branch master** tells us that our current branch is the master branch.\
-**Your branch is up to date with 'origin/master'** assures us that we have pulled all recent commits from our origin repository's master branch.\
-**Changes not staged for commit:** gives us a list of all files that have been modified since our last commit. These file changed are in our working directory, but not in our staging area (Index).\
+**On branch master** tells you that your current (working) branch is the master branch.\
+**Your branch is up to date with 'origin/master'** assures you that you have pulled all recent commits from your origin repository's master branch.\
+**Changes not staged for commit:** gives you a list of all files that have been modified since your last commit. These file changed are in your working directory, but not in your staging area (Index).\
 \
-In addition to these details, `git status` also will give you sample commands to do common tasks that you may be interested in doing, such as `git add`...\
+In addition to these details, `git status` also will give you sample commands to do common tasks that you may be interested in doing, such as `git add`...
 
 ### Add
 
-Move files from working directory into Staging Area
+`git add` moves files from the working directory to the Staging Area
 
 ```git
 git add <filename>
 ```
 
-flags include:
+Example:
+
+```git
+git add .\README.md
+```
+
+If you run `git status` at this point, you'll notice a change
+
+```git
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+```
+
+Now you can see that your README.md file from above has moved from **Changes not staged for commit** to **Changed to be committed**,\
+or in other words, you've moved README.md from your working directory, to your staging area.\
+\
+While it's not recommended because it can lead to sloppy commits, you may also use `git add *` to add all unstaged files to the staging area in one command.
+
+<!-- #### Add flags
+
+Some of the command flags for add include:
 
 - i - interactive
+-  -->
 
 ### Commit
 
