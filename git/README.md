@@ -5,10 +5,14 @@
 
 ## Tips
 
+TODO
+
 - Keep the length between commits as short as possible
 - Use good, descriptive commit messages
 
 ## Terminologoy
+
+TODO
 
 - Working Directory - 
 - Index (Staging Area)
@@ -17,10 +21,28 @@
 - Remote = Local
 - Upstream
 
+## Workflow
+
+Git projects use the analagy of a tree to organize a repository.\
+The **Master Branch** should always be your **single source of truth**, and hence it's often used as your **trunk**\
+From the **Master Branch**, other branches can be created for various reasons including: Testing, Development, Features, etc.\
+The purpose of branching is to create an isolated part of the repository where changes will not affect anything else,\
+especially the Master Branch
+
+```text
+
+master      --A----------------F--H-->
+               \              /  /
+ft-feature1 ----B-----C------E--/---->
+                       \       /
+ft-feature2 ------------D-----G------>
+```
+
 ## Commands
 
 ### Status
 
+TODO
 To find what files are currently "untracked" vs what is staged to be committed, run
 
 ```git
@@ -48,11 +70,14 @@ git commit -m "message"
 ```
 
 This will commit to the HEAD of the remote working directory, but not yet to the origin directory
+TODO
 
 - fixing commit messages
 - Commit verbage
 
 ### Push
+
+TODO
 
 ```git
 git push
@@ -84,17 +109,29 @@ git branch -d <branchName>
 
 ### Diff
 
+TODO
+
 ### Stash
+
+TODO
 
 ### Tagging
 
+TODO
+
 ### Rebase
 
+TODO
+
 ### Set-Upstream
+
+TODO
 
 ## Concepts
 
 ### Branches
+
+TODO
 
 - naming conventions
   
@@ -120,13 +157,19 @@ git checkout -b <branchName>
 
 ### Merging
 
+TODO
+
 - --no-ff
 
 ### Cherry-Picking
 
+TODO
+
 - Cherry Picking
 
 ### Pull Requests
+
+TODO
 
 - How to / what is
 
@@ -154,13 +197,17 @@ git clone username@host:/path/to/repo
 
 #### Fetch vs. Merge vs. Pull
 
-#### Pull
+##### Pull
 
 A `git pull origin <branchName>` will simply do the same as `git fetch origin <branchName>` followed automatically by `git merge origin <branchName>` and will attempt to do so automatically.
 
-#### Fetch
+##### Fetch
 
-#### Merge
+TODO
+
+##### Merge
+
+TODO
 
 Update your local repository to the newist commit from origin with
 
