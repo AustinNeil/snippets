@@ -1,6 +1,6 @@
 # Using Git
 
-[Great Playground to mess with git commands](https://onlywei.github.io/explain-git-with-d3/#freeplay)
+[Great Playground to mess with git commands](https://onlywei.github.io/explain-git-with-d3/#freeplay)\
 [Other Help](http://rogerdudler.github.io/git-guide/)
 
 ## Tips
@@ -125,8 +125,24 @@ Commits also give you the opportunity to see the working history of a branch or 
 git commit -m "message"
 ```
 
-<!-- This will commit to the HEAD of the remote working directory, but not yet to the origin directory
+In the diagram from above: \
 
+```text
+master      --A----------------F--H-->
+               \              /  /
+ft-feature1 ----B-----C------E--/---->
+                       \       /
+ft-feature2 ------------D-----G------>
+```
+
+Each of the letters A, B, C, D, E, F, G, and H, indicate a commit along the branches of the repo.\
+
+At each of these commits, the HEAD of the remote working directory is pointed there.\
+
+Unstaged changes do not affect the head, nor does staging.\
+
+On the next commit, the HEAD pointer will move to the most recent commit that encompasses all of the changes since the last commit.
+<!--
 TODO
 
 - fixing commit messages -->
@@ -230,6 +246,23 @@ TODO
 
 ### Branching
 
+#### List available branches
+
+To see a full list of available branches, including your current branch run,
+
+```git
+git branch
+```
+
+with no arguments or flags\
+Sample Output:\
+
+```git
+* master
+```
+
+From the above sample we see just a single branch, the master branch, and the * indicates that master is the **working branch**
+
 #### Create a new branch
 
 To create a new brach run,
@@ -237,6 +270,8 @@ To create a new brach run,
 ```git
 git branch <branchName>
 ```
+
+**Note:** Branches are always created from a source. The source of a branch is your **working branch** when you create a new branch.
 
 ##### Move to new branch
 
@@ -282,6 +317,51 @@ TODO
 TODO
 
 - How to / what is -->
+
+#### Putting it together
+
+So far we've established the commands: Add, Status, Commit, Push, Log, and various branch commands. How do they fit together? \
+Lets look at the diagram one more time.
+
+```text
+master      --A----------------G--H-->
+               \              /  /
+ft-feature1 ----B-----C------F--/---->
+                       \       /
+ft-feature2 ------------D-----E------>
+```
+
+How do we create this diagram, one command at a time?\
+  1) `git branch ft-feature1` - This creates the ft-feature1 branch, and sets the inital state of the branch at B
+  2) `git checkout ft-feature1` - Make the working branch ft-feature1
+  3) *Some code changes*
+  4) `git add *` - Add changes from above to staging area
+  5) `git commit -m "Commit C"` - Commit the staged changes, move the HEAD of ft-feature1 to C
+  6) `git checkout -b ft-feature2` - Since our working branch is ft-feature1, ft-feature2 will be a child of ft-feature1, and point D will be the initial state of ft-feature2, which is also a copy of C
+  7) *Some code changes*
+  8) `git add *` - Add above changes to staging area
+  9) `git commit -m "Commit E"` - Commit the staged changes, move the HEAD of ft-feature2 to E
+  10) `git checkout ft-feature1` - Move back to ft-feature1 branch
+  11) *Some code changes*
+  12) `git add *` - Add above changes to staging area
+  13) `git commit -m "Commit F"` - Commit the staged changes, move the HEAD of ft-feature1 to F
+
+At this point, you've made changes for two different features, but you haven't had the opportunity to combine them back into our master branch.\
+How do you do this?\
+Merging!
+
+### Merging
+
+Merging is the answer to moving your changes between temporary branches (such as feature branches if you use them) to permenant branches (such as master).\
+
+The most straightforward way to merge the two feature changes from above into our master branch is to do the following:
+  1) `git checkout master` - Make the working branch master
+  2) `git merge ft-feature1` - This will merge ft-feature1 into master, creating Commit G
+  3) `git merge ft-feature2` - This will merge ft-feature2 into master, creating Commit H
+
+After this has been done and the features have been integrated, you can delete the temporary feature branches using,
+  1) `git branch -d ft-feature1`
+  2) `git branch -d ft-feature2`
 
 ## Scenarios
 
