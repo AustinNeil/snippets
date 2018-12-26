@@ -10,7 +10,7 @@ TODO
 - Keep the length between commits as short as possible
 - Use good, descriptive commit messages
 
-## Terminologoy
+## Terminology
 
 TODO
 
@@ -71,11 +71,13 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-This status report tells us a few very useful things:
-**On branch master** tells us that our current branch is the master branch\
-**Your branch is up to date with 'origin/master'** assures us that we have pulled all recent commits from our origin repository's master branch\
-**Changes not staged for commit:** gives us a list of all files that have been modified since our last commit. These file changed are in our working directory, but not in our staging area (Index)\
-In addition to these details, `git status` also will give you sample commands to do common tasks that you may be interested in doing, such as `git add`...
+This status report tells us a few very useful things:\
+\
+**On branch master** tells us that our current branch is the master branch.\
+**Your branch is up to date with 'origin/master'** assures us that we have pulled all recent commits from our origin repository's master branch.\
+**Changes not staged for commit:** gives us a list of all files that have been modified since our last commit. These file changed are in our working directory, but not in our staging area (Index).\
+\
+In addition to these details, `git status` also will give you sample commands to do common tasks that you may be interested in doing, such as `git add`...\
 
 ### Add
 
