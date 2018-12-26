@@ -102,8 +102,8 @@ Changes to be committed:
         modified:   README.md
 ```
 
-Now you can see that your README.md file from above has moved from **Changes not staged for commit** to **Changed to be committed**,\
-or in other words, you've moved README.md from your working directory, to your staging area.\
+Now you can see that your README.md file from above has moved from **Changes not staged for commit** to **Changed to be committed**.\
+In other words, you've moved README.md from your working directory, to your staging area.\
 \
 While it's not recommended because it can lead to sloppy commits, you may also use `git add *` to add all unstaged files to the staging area in one command.
 
@@ -116,17 +116,42 @@ Some of the command flags for add include:
 
 ### Commit
 
-Commit your changes after adding them to the staging area using,
+Changes in the staging area can be offically commited using `git commit`\
+A git commit is a marker that reflects some change within a code repo, and as such it has a corresponding message with it.\
+\
+Commits also give you the opportunity to see the working history of a branch or repo on the granular level, and are the most granular changes that can be tracked in a repo.
 
 ```git
 git commit -m "message"
 ```
 
-This will commit to the HEAD of the remote working directory, but not yet to the origin directory
+<!-- This will commit to the HEAD of the remote working directory, but not yet to the origin directory
+
 TODO
 
-- fixing commit messages
-- Commit verbage
+- fixing commit messages -->
+
+#### Commit Messages
+
+The most common problem that inhibits git usage amongst teams is poor commit messages.\
+When using the commands that we're going to be talking about soon such as `git log`, good commit messages are imperative.\
+All commit messages should be written in the imperative form:
+
+- Update ...
+- Remove ...
+- Delte ...
+
+Additionally, commit messages should be able to finish this sentence:\
+
+```text
+If applied, this commit will ...
+```
+
+Example:
+
+```git
+git commit -m "Update README.md"
+```
 
 ### Push
 
