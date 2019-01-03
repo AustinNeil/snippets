@@ -180,3 +180,6 @@ foreach ($key in $devAccounts.PSObject.Properties.Name){
 
 ## Switches
 [here](https://powershellexplained.com/2018-01-12-Powershell-switch-statement/?utm_source=blog&utm_medium=blog&utm_content=titlelink)
+
+## More Information to add
+[here](https://ss64.com/ps/syntax-args.html)
