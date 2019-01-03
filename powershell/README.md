@@ -177,3 +177,6 @@ foreach ($key in $devAccounts.PSObject.Properties.Name){
 ## PSCustomObjects
 
 [Information Here](https://kevinmarquette.github.io/2016-10-28-powershell-everything-you-wanted-to-know-about-pscustomobject/)
+
+## Switches
+[here](https://powershellexplained.com/2018-01-12-Powershell-switch-statement/?utm_source=blog&utm_medium=blog&utm_content=titlelink)
